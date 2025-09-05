@@ -31,12 +31,12 @@
 @font-face{
     font-family: "Nazanin";
     font-display: swap;
-    src: url("../FontCss/Nazanin/Far_Nazanin.ttf");
+    src: url("./FontCss/Nazanin/Far_Nazanin.ttf");
 }
 @font-face{
     font-family: "vazir";
     font-display: swap;
-    src: url("../FontCss/vazir-font-v16.1.0/Vazir-Medium.ttf");
+    src: url("./FontCss/vazir-font-v16.1.0/Vazir-Medium.ttf");
 }
 .Tangerine{
     font-family: "Tangerine";
@@ -61,4 +61,5 @@
 }
 .vazir{
     font-family: "vazir";
+
 }
