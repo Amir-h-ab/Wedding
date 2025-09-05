@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./FontCss/Font.css">
+    <link rel="stylesheet" href="../src/input.css">
+    <link rel="icon" type="image/png" href="./img/png/Love-fav.png">
+    <title>کارت دعوت</title>
+</head>
+<body class="Inrer">
+  <svg class="hidden">
+      <symbol id="play" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+      </symbol>
+      
+      <symbol id="calendar" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 9H21M7 3V5M17 3V5M6 13H8M6 17H8M11 13H13M11 17H13M16 13H18M16 17H18M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="location" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#b08c3e" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></symbol>  
+  
+      <symbol id="speaker-wave" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+      </symbol>
+
+      <symbol id="speaker-x-mark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+    </symbol>
+
+    </svg>
+  <!-- Section Head -->
+<section>
+  <div class="relative flex flex-col justify-center items-center Tangerine img-header h-[650px] pb-[70px]">
+    <!-- لایه مشکی -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <!-- متن -->
+    <div class="relative text-white text-center px-4 md:px-8">
+      <h1 class="animate-on-scroll opacity-0 transition-all duration-1000 text-[70px] md:text-[90px] xl:text-[120px]">
+        Maryam & Masoud
+      </h1>
+      <div class="Inter flex items-center justify-center gap-x-1 md:gap-x-2 text-xs md:text-[15px] animate-on-scroll opacity-0 -translate-y-10 transition-all duration-1000 delay-1000 ease-out">
+        <span>10</span>
+        <span>SEPTEMBER</span>
+        <span>2025</span>
+      </div>
+    </div>
+
+    <!-- عکس گرد پایین -->
+    <div class="absolute -bottom-[150px] left-1/2 transform -translate-x-1/2 bg-white/20 w-fit h-fit p-[15px] rounded-full overflow-hidden">
+      <div class="size-55 rounded-full overflow-hidden">
+        <img src="./img/round-image-center.jpg" class="hover:scale-110 duration-300 transition-all" alt="p-1" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+  <section>
+    <div class="pt-48 xl:mx-[140px]">
+      <div class="grid justify-center">
+      <!-- <h2 class="text-Golden uppercase tracking-[2px] md:tracking-[6px] text-center text-sm Roboto">hello & welcome</h2> -->
+      <p class="IranNastaliq text-[35px] md:text-[60px] mb-[80px]">به جشن پیوند عشقمان خوش آمدید</p>
+      </div>
+    </div>
+
+    <div class="bg-Few-White pb-[50px]">
+      <div class="flex flex-col items-center pt-12.5 leading-15">
+        <p class="IranNastaliq text-3xl md:text-4xl text-Golden tracking-[4px]">عروس و داماد</p>
+        <h2 class="Alex_Brush text-[50px] md:text-[60px] text-Deep-Dark">Happy Couple</h2>
+      </div>
+<div class="flex flex-wrap flex-col-reverse md:flex-row justify-center md:flex-nowrap xl:mx-[140px] js-observe-parent">
+  <!-- Groom -->
+  <div class="flex flex-col items-center w-full p-[50px]">
+    <div class="image-box from-top opacity-0 transition-all duration-1000 ease-out will-change-transform
+                size-50 rounded-full overflow-hidden">
+      <img src="./img/png/groom.png" loading="lazy" alt="Groom" class="w-full h-full object-cover">
+    </div>
+    <div class="mb-5 text-center md:text-right">
+      <h4 class="IranNastaliq pr-2 md:p-0 text-[50px]">مسعود</h4>
+      <!-- <p class="text-Golden text-[12px] text-center md:text-sm tracking-[4px] Roboto">The Groom</p> -->
+    </div>
+    <p class="text-sm vazir text-Golden text-center leading-8">
+      آغاز با هم بودنمان را با حضورتان جشن می‌گیریم
+    </p>
+  </div>
+
+  <!-- Bride -->
+  <div class="flex flex-col items-center w-full p-[50px]">
+    <div class="image-box from-bottom opacity-0 transition-all duration-1000 ease-out will-change-transform
+                size-50 rounded-full overflow-hidden">
+      <img src="./img/png/bride.png" loading="lazy" alt="Bride" class="w-full h-full object-cover">
+    </div>
+    <div class="grid justify-items-center mb-5 text-center md:text-right">
+      <h4 class="IranNastaliq pr-2 md:p-0 text-[50px]">مریم</h4>
+      <!-- <p class="text-Golden text-[12px] text-center md:text-sm tracking-[4px] Roboto">The Bride</p> -->
+    </div>
+    <p class="text-sm vazir text-Golden text-center leading-8">
+      زندگی‌مان را به نام عشق آغاز می‌کنیم، در کنار شما
+    </p>
+  </div>
+</div>
+
+      </div>
+    </section>
+    <!-- Hour & Date -->
+    <section>
+      <div>
+        <div>
+          <div class="flex flex-col items-center justify-center text-Few-White py-[100px] hour-date gap-y-9">
+            <div class="text-xl md:text-[35px] vazir">لحظه شمار عروسی ما</div>
+
+            <div class="flex flex-row-reverse gap-x-8 text-center">
+              <div class="flex flex-col items-center">
+                <div id="days" class="count Great_Vibes text-[40px] md:text-[65px]">00</div>
+                <div class="text-[15px] vazir">روز</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div id="hours" class="count Great_Vibes text-[40px] md:text-[65px]">00</div>
+                <div class="text-[15px] vazir">ساعت</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div id="minutes" class="count Great_Vibes text-[40px] md:text-[65px]">00</div>
+                <div class="text-[15px] vazir">دقیقه</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div id="seconds" class="count Great_Vibes text-[40px] md:text-[65px]">00</div>
+                <div class="text-[15px] vazir">ثانیه</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="py-[100px]">
+      <div class="flex flex-col items-center justify-center vazir">
+        <p class="text-Golden text-sm mb-4 uppercase tracking-widest">our memories</p>
+        <h3 class="text-3xl md:text-4xl">گالری تصاویر</h3>
+      </div>
+    </div>
+    <!-- Image Groom & Bride -->
+  <section class="px-2 xl:px-[105px] pb-[100px]">
+      
+<div class="transition-all">
+  <div class="grid grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-2.5 lg:gap-4 h-full">
+
+    <div class="relative flex items-center justify-center overflow-hidden group cursor-pointer">
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 z-10 pointer-events-none"></div>
+      <img src="./img/png/4.png" class="transition-transform duration-500 group-hover:scale-110 zoom-img relative z-0" alt="">
+    </div>
+
+    <div class="relative flex items-center justify-center row-span-2 overflow-hidden group cursor-pointer">
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 z-10 pointer-events-none"></div>
+      <img src="./img/png/2-e1689889773808.png" class="transition-transform duration-500 group-hover:scale-110 zoom-img relative z-0" alt="">
+    </div>
+
+    <div class="relative flex items-center justify-center overflow-hidden group cursor-pointer">
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 z-10 pointer-events-none"></div>
+      <img src="./img/png/5.png" class="transition-transform duration-500 group-hover:scale-110 zoom-img relative z-0" alt="">
+    </div>
+
+    <div class="relative flex items-center justify-center overflow-hidden group cursor-pointer">
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 z-10 pointer-events-none"></div>
+      <img src="./img/png/3.png" class="transition-transform duration-500 group-hover:scale-110 zoom-img relative z-0" alt="">
+    </div>
+
+    <div class="relative flex items-center justify-center overflow-hidden group cursor-pointer">
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 z-10 pointer-events-none"></div>
+      <img src="./img/png/1.png" class="transition-transform duration-500 group-hover:scale-110 zoom-img relative z-0" alt="">
+    </div>
+
+  </div>
+</div>
+
+<div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50">
+  <button id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl z-50">&times;</button>
+  
+  <button id="prev-lightbox" class="absolute left-5 text-white text-3xl z-50 rotate-180">&lt;</button>
+  
+  <img id="lightbox-img" src="" class="max-w-[90%] max-h-[90%] transition-transform duration-500 scale-95 opacity-0">
+
+  <button id="next-lightbox" class="absolute right-5 text-white text-3xl z-50 rotate-180">&gt;</button>
+</div>
+
+  </section>
+
+  <!-- Video Attachment -->
+  <section>
+    <div>
+<div class="flex flex-col justify-center items-center short-video text-white">
+  <p class="text-sm vazir">آغاز یک داستان عاشقانه</p>
+  <h3 class="text-[40px] pt-3 md:text-6xl IranNastaliq">سفر عشق ما را تماشا کنید</h3>
+
+  <div class="relative flex items-center justify-center">
+    <!-- دایره پالس اول -->
+    <span class="absolute w-[90px] h-[90px] md:w-[120px] md:h-[120px] rounded-full bg-white opacity-30 animate-pulse-ring"></span>
+    <!-- دایره پالس دوم -->
+    <span class="absolute w-[90px] h-[90px] md:w-[120px] md:h-[120px] rounded-full bg-white opacity-30 animate-pulse-ring delay-[1.5s]"></span>
+
+    <!-- دکمه اصلی -->
+    <div id="play-video" class="relative size-14.5 md:size-[90px] bg-white rounded-full flex items-center justify-center cursor-pointer z-10">
+      <svg class="size-7.5 text-Golden">
+        <use href="#play"></use>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- لایت باکس ویدیو -->
+<div id="video-lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+  <button id="close-video" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
+  <video id="video-player" class="max-w-[90%] max-h-[80%]" controls>
+    <source src="./video/wedding_rings.mp4" type="video/mp4">
+    مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+  </video>
+</div>
+    </div>
+  </section>
+
+  <div class="flex flex-col justify-center items-center mt-[100px] mb-8">
+    <p class="text-sm text-Golden vazir tracking-[4px]">save the date</p>
+    <h3 class="text-Deep-Dark text-[30px] md:text-4xl vazir">چه وقت؟ در کجا؟</h3>
+  </div>
+  
+<div class="xl:mx-[105px]">
+  <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between Nazanin text-xl font-bold text-Deep-Dark order-1 md:pb-6">
+    
+    <div class="flex flex-col items-center justify-center mx-auto text-center p-4 order-2 md:order-1 reveal">
+      <div class="flex items-center justify-center border-3 border-Golden rounded-full overflow-hidden size-[66px] mb-3">
+        <svg class="text-Golden size-7.5">
+          <use href="#calendar"></use>
+        </svg>
+      </div>
+      <p class="text-base md:text-xl">19 شهریور 1404</p>
+      <h4 class="text-sm md:text-[18px] mt-2">از ساعت 19 تا 23 به صرف شیرینی و شام</h4>
+    </div>
+
+    <div class="w-full md:w-auto md:order-2">
+      <img src="./img/01.jpg" class="w-full md:w-[550px] z object-center object-cover" loading="lazy" alt="">
+    </div>
+
+  </div>
+</div>
+
+<!-- Date & Location -->
+<section>
+<div class="xl:mx-[105px] md:py-[50px]">
+  <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between Nazanin text-xl font-bold text-Deep-Dark">
+    
+    <div class="w-full md:w-auto order-1">
+      <img src="./img/02.jpg" class="w-full md:w-[550px] z object-center object-cover" loading="lazy" alt="">
+    </div>
+<div class="flex flex-col items-center justify-center mx-auto text-center p-4 order-2 reveal">
+  
+  <div class="flex items-center justify-center border-3 border-Golden rounded-full overflow-hidden size-[66px] mb-3">
+    <svg class="text-Golden size-7.5">
+      <use href="#location"></use>
+    </svg>
+  </div>
+  
+  <p class="text-base md:text-xl">19 شهریور 1404</p>
+  <h4 class="text-sm md:text-[18px] font-bold mt-2">شهرک فرهنگیان، هتل تالار امیران</h4>
+  
+  <a href="https://maps.google.com?q=شهرک فرهنگیان، هتل تالار امیران" target="_blank">
+    <div class="flex items-center justify-center rounded-full overflow-hidden mt-4 w-[118px] h-[41px] bg-Golden text-Few-White transition-colors hover:bg-[#977938] duration-300">
+      مسیریابی
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+</section>
+<!-- Footer -->
+ <div>
+  <div class="flex items-center justify-center footer-background">
+    <div class="bg-Few-White text-Deep-Dark w-[498px]  opacity-90 text-center py-[20px] px-2.5 IranNastaliq text-[28px] md:text-[36px] leading-[2.5em] flex flex-col items-center justify-center flex-wrap">
+      <p>الهه عشق به انسانها آموخت که عاشقانه زندگی کنند</p>
+      <p>و با پیوند همیشه پایداری که سوگندش را در قلبهایمان جاودانه کرده‌اند</p>
+      <p>و به هم در آمیزند و یکی شوند</p>
+      <p>چه شادمانه است فریاد گونه این سوگند</p>
+    </div>
+  </div>
+ </div>
+
+
+
+
+ <!-- پاپ آپ انتخاب صدا -->
+<div id="sound-popup" class="fixed inset-0 flex items-center justify-center bg-black/70 z-50">
+  <div class="bg-white/70 rounded-2xl shadow-xl p-6 flex flex-col items-center gap-4 w-[296px] md:w-[496px]">
+    <h2 class="text-sm md:text-lg font-bold vazir">اجازه پخش موسیقی را می دهید؟</h2>
+    <div class="flex gap-6">
+      <!-- دکمه بی صدا -->
+      <div class="grid grid-cols-2 gap-x-24 md:gap-x-36">
+      <button id="mute-btn" class="flex flex-col items-center text-gray-600 hover:text-red-600 transition order-1 shod">
+        <div class="flex items-center justify-center size-[60px] rounded-full overflow-hidden bg-Few-White">
+        <svg class="size-[30px] text-Deep-Dark">
+          <use href="#speaker-x-mark"></use>
+        </svg>
+        </div>
+      </button>
+      <!-- دکمه با صدا -->
+      <button id="unmute-btn" class="flex flex-col items-center text-gray-600 hover:text-green-600 transition">
+        <div class="flex items-center justify-center size-[60px] rounded-full overflow-hidden bg-Few-White">
+        <svg class="size-[30px] text-Deep-Dark">
+          <use href="#speaker-wave"></use>
+        </svg>
+        </div>
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- موزیک -->
+<audio id="bg-music" loop>
+  <source src="./music/Arman Garshasbi - Benshin Tamashayat Konam (320).mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+  (function(){
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // وقتی وارد صفحه شد → انیمیشن اجرا بشه
+          entry.target.classList.remove("opacity-0","translate-y-10");
+          entry.target.classList.add("opacity-100","translate-y-0");
+
+          // وقتی از صفحه خارج شد → ریست بشه
+        } else {
+          entry.target.classList.remove("opacity-100","translate-y-0");
+          entry.target.classList.add("opacity-0","translate-y-10");
+        }
+      });
+    }, { threshold: 0.2 }); // 20٪ المان دیده بشه، انیمیشن فعال بشه
+
+    document.querySelectorAll(".animate-on-scroll").forEach(el => observer.observe(el));
+  })();
+</script>
+
+<script>
+(() => {
+  const parent = document.querySelector('.js-observe-parent');
+  if (!parent || !('IntersectionObserver' in window)) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const boxes = entry.target.querySelectorAll('.image-box');
+
+      if (entry.isIntersecting) {
+        // وقتی والد وارد viewport شد → هر دو با یک زمان (یا stagger) نمایش داده میشن
+        boxes.forEach((box, i) => {
+          // اگر میخوای دقیقاً هم‌زمان: delay = 0
+          // اگر میخوای کمی stagger باشه: delay = i * 150 (مثال)
+          const delay = i * 120; // تنظیم کن: 0 یا 120 یا 300 (ms)
+          setTimeout(() => {
+            box.classList.remove('opacity-0');
+            box.classList.remove('-translate-y-10','translate-y-10');
+            box.classList.add('opacity-100','translate-y-0');
+          }, delay);
+        });
+      } else {
+        // وقتی از ویوپورت خارج شد → ریست کن تا با اسکرول دوباره اجرا بشه
+        boxes.forEach(box => {
+          box.classList.remove('opacity-100','translate-y-0');
+          box.classList.add('opacity-0');
+          if (box.classList.contains('from-top')) {
+            box.classList.add('-translate-y-10');
+          } else {
+            box.classList.add('translate-y-10');
+          }
+        });
+      }
+    });
+  }, {
+    threshold: 0.25,
+    rootMargin: '0px 0px -10% 0px'
+  });
+
+  io.observe(parent);
+})();
+</script>
+<!-- Calendar -->
+<script>
+  // تاریخ مراسم: 10 سپتامبر 2025 - ساعت 19:00:00
+  const weddingDate = new Date("September 10, 2025 19:00:00").getTime();
+
+  function animateCount(id, newValue) {
+    const el = document.getElementById(id);
+    if (el.innerText !== newValue.toString()) {
+      el.classList.add("fade");
+      setTimeout(() => {
+        el.innerText = newValue;
+        el.classList.remove("fade");
+      }, 300);
+    }
+  }
+
+  const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance <= 0) {
+      clearInterval(timer);
+      document.querySelector(".hour-date").innerHTML =
+        "<div class='text-2xl md:text-4xl vazir'>مراسم شروع شد 🎉</div>";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    animateCount("days", days);
+    animateCount("hours", hours);
+    animateCount("minutes", minutes);
+    animateCount("seconds", seconds);
+  }, 1000);
+</script>
+<!-- Image Effect -->
+ <script>
+const zoomImgs = document.querySelectorAll('.zoom-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.getElementById('close-lightbox');
+const nextBtn = document.getElementById('next-lightbox');
+const prevBtn = document.getElementById('prev-lightbox');
+
+let currentIndex = 0;
+const imgsSrc = Array.from(zoomImgs).map(img => img.src);
+
+zoomImgs.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    showImage(currentIndex);
+    lightbox.classList.remove('hidden');
+  });
+});
+
+function showImage(index) {
+  lightboxImg.classList.add('opacity-0', 'scale-95');
+  setTimeout(() => {
+    lightboxImg.src = imgsSrc[index];
+    lightboxImg.classList.remove('opacity-0', 'scale-95');
+  }, 100);
+}
+
+closeBtn.addEventListener('click', () => lightbox.classList.add('hidden'));
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % imgsSrc.length;
+  showImage(currentIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + imgsSrc.length) % imgsSrc.length;
+  showImage(currentIndex);
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) lightbox.classList.add('hidden');
+});
+
+ </script>
+<!-- Animation Image Effect -->
+<script>
+const galleryCards = document.querySelectorAll('.grid .group');
+
+// کلاس اولیه + استگر
+galleryCards.forEach((el, i) => {
+  el.classList.add('reveal-card');
+  el.style.setProperty('--stagger', `${i * 120}ms`);
+});
+
+// آبزرور
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show'); // خروج => ریست بشه
+    }
+  });
+}, { threshold: 0.2 });
+
+galleryCards.forEach(el => io.observe(el));
+</script>
+  <!-- Video -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const playBtn = document.getElementById("play-video");
+  const videoLightbox = document.getElementById("video-lightbox");
+  const videoPlayer = document.getElementById("video-player");
+  const closeBtn = document.getElementById("close-video");
+
+  // اگر یکی از المنت‌ها پیدا نشد، خطا نده
+  if (!playBtn || !videoLightbox || !videoPlayer || !closeBtn) return;
+
+  const open = () => {
+    videoLightbox.classList.remove("hidden");
+    videoLightbox.classList.add("flex");
+    // بعضی مرورگرها autoplay رو بلاک می‌کنن؛ خطا رو نادیده بگیر
+    videoPlayer.play().catch(() => {});
+  };
+
+  const close = () => {
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+    videoLightbox.classList.add("hidden");
+    videoLightbox.classList.remove("flex");
+  };
+
+  playBtn.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+
+  // بستن با کلیک روی بک‌گراند
+  videoLightbox.addEventListener("click", (e) => {
+    if (e.target === videoLightbox) close();
+  });
+
+  // بستن با Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+});
+</script>
+<!-- Music -->
+ <script>
+const popup = document.getElementById('sound-popup');
+const music = document.getElementById('bg-music');
+const muteBtn = document.getElementById('mute-btn');
+const unmuteBtn = document.getElementById('unmute-btn');
+
+// انتخاب بی صدا
+muteBtn.addEventListener('click', () => {
+  popup.classList.add('hidden'); // بستن پاپ آپ
+  // آهنگ پخش نشه
+});
+
+// انتخاب با صدا
+unmuteBtn.addEventListener('click', () => {
+  popup.classList.add('hidden'); // بستن پاپ آپ
+  music.play(); // پخش آهنگ
+});
+</script>
+<!-- Anamtion Effet-1 -->
+<script>
+const revealEl = document.querySelector('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('active');
+    } else {
+      entry.target.classList.remove('active'); // هر بار که اسکرول شد دوباره انیمیشن اجرا میشه
+    }
+  });
+}, { threshold: 0.2 });
+
+observer.observe(revealEl);
+</script>
+<!-- Anamtion Effet-2 -->
+ <script>
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach((reveal) => {
+    const elementTop = reveal.getBoundingClientRect().top;
+    const elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveal.classList.add("active");
+    } else {
+      reveal.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+
+</body>
+</html>

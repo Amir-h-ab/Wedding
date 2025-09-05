@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme{
+    --color-Deep-Dark:#1b1b1b;
+    --color-Few-White:#faf8f7;
+    --color-Golden:#b08c3e;
+    --color-color-video:#b19b78;
+}
+
+.img-header{
+    background: url("../public/img/slide.jpg");
+    height: 650px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hour-date {
+    background: url("../public/img/count-down-bg.jpg");
+    height: 381px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+@media only screen and (max-width: 768px) {
+    .hour-date{
+        height: 232px;
+        background-attachment: fixed;
+    }
+}
+.count {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.count.fade {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.count {
+  display: inline-block;
+  min-width: 2ch;
+  text-align: center;
+}
+.short-video {
+  background: url("../public/img/png/video-bg-1.png");
+  width: 100%;
+  height: 361px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media only screen and (max-width: 768px) {
+    .short-video{
+        background-attachment: local;
+    }
+}
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.3;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulseRing 3s linear infinite;
+}
+.footer-background {
+  background: url("../public/img/png/poem-bg.png");
+  width: 100%;
+  height: 444px;
+  background-size: cover;
+  background-position: center;
+}
+/* Animation Image Effect */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  filter: blur(6px);
+  transition: 
+    opacity .7s ease, 
+    transform .7s cubic-bezier(.22,.61,.36,1), 
+    filter .6s ease;
+  transition-delay: var(--stagger, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.reveal-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+/* Animation Date */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation Effet-1 */
+.reveal-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-wrapper.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Animation Effet-2 */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

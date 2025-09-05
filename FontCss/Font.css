@@ -1,0 +1,64 @@
+@font-face{
+    font-family: "Tangerine";
+    font-display: swap;
+    src: url("./Tangerine/Tangerine-Regular.ttf");
+}
+@font-face{
+    font-family: "Roboto";
+    font-display: swap;
+    src: url("./Roboto/static/Roboto-Medium.ttf");
+}
+@font-face{
+    font-family: "Alex_Brush";
+    font-display: swap;
+    src: url("./Alex_Brush/AlexBrush-Regular.ttf");
+}
+@font-face{
+    font-family: "Great_Vibes";
+    font-display: swap;
+    src: url("./Great_Vibes/GreatVibes-Regular.ttf");
+}
+@font-face{
+    font-family: "IranNastaliq";
+    font-display: swap;
+    src: url("./IranNastaliq/IranNastaliq/IranNastaliq.ttf");
+}
+@font-face{
+    font-family: "Inter";
+    font-display: swap;
+    src: url("./Inter/static/Inter_18pt-Medium.ttf");
+}
+@font-face{
+    font-family: "Nazanin";
+    font-display: swap;
+    src: url("../FontCss/Nazanin/Far_Nazanin.ttf");
+}
+@font-face{
+    font-family: "vazir";
+    font-display: swap;
+    src: url("../FontCss/vazir-font-v16.1.0/Vazir-Medium.ttf");
+}
+.Tangerine{
+    font-family: "Tangerine";
+}
+.Roboto{
+    font-family: "Roboto";
+}
+.Alex_Brush{
+    font-family: "Alex_Brush";
+}
+.Great_Vibes{
+    font-family: "Great_Vibes";
+}
+.IranNastaliq{
+    font-family: "IranNastaliq";
+}
+.Inter{
+    font-family: "Inter";
+}
+.Nazanin{
+    font-family: "Nazanin";
+}
+.vazir{
+    font-family: "vazir";
+}
